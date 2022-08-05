@@ -29,6 +29,14 @@ const projects = [
     Previewlink: "",
     Githublink: "",
   },
+  {
+    title: "Minecraft skins",
+    cardImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjtcyiYIHuA5kdlRhCKt5pgvZ804Jt7bR8938IzIiR6zCQ-seUNutFtmIpyggI-HzMI4&usqp=CAU",
+    description: "These are some Minecraft skins that i have made over my time playing minecraft",
+    tagimg: "https://www.minecraftskins.com/uploads/preview-skins/2021/06/23/dark-mage-18201473.png?v525",
+    Previewlink: "https://www.minecraftskins.com/profile/5046658/neb1803",
+    Githublink: "https://www.minecraftskins.com/profile/5046658/neb1803",
+  },
 ];
 
 // function for rendering project cards data
