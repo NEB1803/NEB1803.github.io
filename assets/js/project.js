@@ -22,20 +22,20 @@ const projects = [
     Githublink: "https://github.com/NEB1803/Python-minecraft-discord-bot-",
   },
   {
+    title: "Minecraft skins",
+    cardImage: "https://www.minecraftskins.com/uploads/preview-skins/2021/06/23/dark-mage-18201473.png?v525",
+    description: "These are some Minecraft skins that i have made over my time playing minecraft",
+    tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
+    Previewlink: "https://www.minecraftskins.com/profile/5046658/neb1803",
+    Githublink: "https://www.minecraftskins.com/profile/5046658/neb1803",
+  },
+  {
     title: "In Progress..",
     cardImage: "assets/images/experience-page/empty.png",
     description: "This part of project is still in progress.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "",
     Githublink: "",
-  },
-  {
-    title: "Minecraft skins",
-    cardImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjtcyiYIHuA5kdlRhCKt5pgvZ804Jt7bR8938IzIiR6zCQ-seUNutFtmIpyggI-HzMI4&usqp=CAU",
-    description: "These are some Minecraft skins that i have made over my time playing minecraft",
-    tagimg: "https://www.minecraftskins.com/uploads/preview-skins/2021/06/23/dark-mage-18201473.png?v525",
-    Previewlink: "https://www.minecraftskins.com/profile/5046658/neb1803",
-    Githublink: "https://www.minecraftskins.com/profile/5046658/neb1803",
   },
 ];
 
