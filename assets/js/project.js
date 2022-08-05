@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Minecraft Server Bot {PY}",
     cardImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjtcyiYIHuA5kdlRhCKt5pgvZ804Jt7bR8938IzIiR6zCQ-seUNutFtmIpyggI-HzMI4&usqp=CAU",
-    description: "This bot is adds features like adding live update of Server users custom reactions and etc.",
+    description: "This bot is adds features like adding live update..",
     tagimg: "https://image.flaticon.com/icons/png/512/643/643350.png",
     Previewlink: "",
     Githublink: "https://github.com/NEB1803/Python-minecraft-discord-bot-",
