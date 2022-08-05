@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "Minecraft Server Bot {PY}",
-    cardImage: "https://ursi-dae.github.io/assets/img/NEB1803.png",
+    cardImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjtcyiYIHuA5kdlRhCKt5pgvZ804Jt7bR8938IzIiR6zCQ-seUNutFtmIpyggI-HzMI4&usqp=CAU",
     description: "This bot is adds features like adding live update..",
     tagimg: "https://image.flaticon.com/icons/png/512/643/643350.png",
     Previewlink: "",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "Minecraft skins",
-    cardImage: "https://www.minecraftskins.com/uploads/preview-skins/2021/06/23/dark-mage-18201473.png?v525",
+    cardImage: "https://ursi-dae.github.io/assets/img/NEB1803.png",
     description: "These are some Minecraft skins made by me",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://www.minecraftskins.com/profile/5046658/neb1803",
