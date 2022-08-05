@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Minecraft Server Bot {PY}",
     cardImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjtcyiYIHuA5kdlRhCKt5pgvZ804Jt7bR8938IzIiR6zCQ-seUNutFtmIpyggI-HzMI4&usqp=CAU",
-    description: "This bot is better than the javascript bot where it adds features like adding live update of Server users custom reactions and etc.",
+    description: "This bot is adds features like adding live update of Server users custom reactions and etc.",
     tagimg: "https://image.flaticon.com/icons/png/512/643/643350.png",
     Previewlink: "",
     Githublink: "https://github.com/NEB1803/Python-minecraft-discord-bot-",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Minecraft skins",
     cardImage: "https://www.minecraftskins.com/uploads/preview-skins/2021/06/23/dark-mage-18201473.png?v525",
-    description: "These are some Minecraft skins that i have made over my time playing minecraft",
+    description: "These are some Minecraft skins made by me",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://www.minecraftskins.com/profile/5046658/neb1803",
     Githublink: "https://www.minecraftskins.com/profile/5046658/neb1803",
