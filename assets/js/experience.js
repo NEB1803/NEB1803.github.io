@@ -6,7 +6,7 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Server Creation And Admin",
+    title: "Server Creator And Admin",
     cardImage: "assets/images/experience-page/PixelHeim.png",
     place: "PixelHeim",
     time: "(22/4/2021 - 28/5/2021)",
@@ -26,7 +26,13 @@ const exp = [
     time: "(08/09/2022 - Present)",
     desp: "<li>After Buncraft ended and moved to HirayaCraft I took a break for my studies </li><li>When i was back i had this great offer from Masaki so i joined EliteFantasy Staff Team</li>",
   },
-  
+  {
+    title: "Developer",
+    cardImage: "https://imgur.com/a/hIHUUMi",
+    place: "EliteFantasy",
+    time: "(08/09/2022 - Present)",
+    desp: "<li>After Buncraft ended and moved to HirayaCraft I took a break for my studies </li><li>When i was back i had this great offer from Masaki so i joined EliteFantasy Staff Team</li>",
+  },
 ];
 
 const showCards2 = () => {
@@ -81,7 +87,8 @@ const volunteershipcards = [
     cardImage: "https://imgur.com/a/hIHUUMi",
     description:
       "Its a whole new experience of minecraft with custom and cool resources that feels surreal :)",
-  }
+  },
+  
   {
     title: "Empty",
     cardImage: "assets/images/experience-page/empty.png",
@@ -115,6 +122,12 @@ document.addEventListener("DOMContentLoaded", showCards);
 
 const hackathonsection = document.querySelector(".hackathon-section");
 const mentor = [
+  {
+    title: "Stock_",
+    subtitle: "Owner-Harmonia Network",
+    image: "https://cdn.discordapp.com/avatars/772850997915025448/c8ae9ed59eb3b027c67095ead9e6743c.png",
+    desp: "A really great developer, especially when it comes to being creative and cooperative at all times. Deep understanding of his work, makes him the perfect developer you'll need for your work. I highly recommend hiring him.",
+  },
   {
     title: "Empty",
     subtitle: "...",
