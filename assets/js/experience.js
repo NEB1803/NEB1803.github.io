@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", showCards2);
 const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
-    title: "Void Network",
+    title: "",
     cardImage: "https://i.imgur.com/iNqDb1y.png",
     description:
       "This Server Is being created in 1.17.1 Platform on Paper Server as Requested By the Owner creeperquinn#6141",
@@ -66,7 +66,7 @@ const volunteershipcards = [
     title: "Ursidae Network",
     cardImage: "https://i.imgur.com/CGrBRCF.png",
     description:
-      "This is a Personal server hosted in Geode Host where other players can join https://ursi-dae.github.io/",
+      "This is a Personal server hosted where other players can join https://ursi-dae.github.io/",
   },
 ];
 
