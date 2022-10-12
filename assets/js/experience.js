@@ -9,7 +9,7 @@ const exp = [
     title: "Junior Developer",
     cardImage: "assets/images/experience-page/BunCraft.png",
     place: "BunCraft",
-    time: "(29/07/2021 - Present)",
+    time: "(29/07/2021 - 06/14/2022)",
     desp: "<li>After Leaving PixelHeim I did some free-lance work and then joined Buncraft as Junior Developer</li><li>I worked on the Custom Python Server Bot and in helping Server Development</li>",
   },
   {
