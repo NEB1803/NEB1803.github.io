@@ -123,10 +123,16 @@ document.addEventListener("DOMContentLoaded", showCards);
 const hackathonsection = document.querySelector(".hackathon-section");
 const mentor = [
   {
-    title: "Stock_",
+    title: "Stock_#1891",
     subtitle: "Owner-Harmonia Network",
     image: "https://cdn.discordapp.com/avatars/772850997915025448/c8ae9ed59eb3b027c67095ead9e6743c.png",
     desp: "A really great developer, especially when it comes to being creative and cooperative at all times. Deep understanding of his work, makes him the perfect developer you'll need for your work. I highly recommend hiring him.",
+  },
+  {
+    title: "Masaki#3660",
+    subtitle: "Owner-EliteFantasy",
+    image: "https://cdn.discordapp.com/avatars/957047264826781736/ed4607454fc251b0a3340bc9795102d9.png?size=2048",
+    desp: "10/10 service from Neb, active in what is asked and pleasant",
   },
   {
     title: "Empty",
