@@ -21,17 +21,17 @@ const exp = [
   },
   {
     title: "Developer",
-    cardImage: "https://imgur.com/a/hIHUUMi",
+    cardImage: "https://i.imgur.com/CAsnHb5.png",
     place: "EliteFantasy",
     time: "(08/09/2022 - Present)",
     desp: "<li>After Buncraft ended and moved to HirayaCraft I took a break for my studies </li><li>When i was back i had this great offer from Masaki so i joined EliteFantasy Staff Team</li>",
   },
   {
-    title: "Developer",
-    cardImage: "https://imgur.com/a/hIHUUMi",
-    place: "EliteFantasy",
+    title: "Admin",
+    cardImage: "https://i.imgur.com/oo6RRUt.png",
+    place: "Harmonia Network",
     time: "(08/09/2022 - Present)",
-    desp: "<li>After Buncraft ended and moved to HirayaCraft I took a break for my studies </li><li>When i was back i had this great offer from Masaki so i joined EliteFantasy Staff Team</li>",
+    desp: "<li>A recent endeavor introduced me to Stock_#1891 </li><li>It is a new sprouting server with multiple gamemodes made for diverse players</li>",
   },
 ];
 
@@ -72,7 +72,7 @@ const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
     title: "Harmonia Nerwork",
-    cardImage: "https://imgur.com/a/fe7FfKv",
+    cardImage: "https://i.imgur.com/oo6RRUt.png",
     description:
       "A Minecraft server accessible for diverse users, themed over harmony the server intends to provide diverse game modes for players to enjoy.",
   },
@@ -84,7 +84,7 @@ const volunteershipcards = [
   },
   {
     title: "Elite Fantasy",
-    cardImage: "https://imgur.com/a/hIHUUMi",
+    cardImage: "https://i.imgur.com/CAsnHb5.png",
     description:
       "Its a whole new experience of minecraft with custom and cool resources that feels surreal :)",
   },
