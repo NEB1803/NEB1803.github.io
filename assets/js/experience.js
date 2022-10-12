@@ -6,19 +6,27 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Junior Developer",
-    cardImage: "assets/images/experience-page/BunCraft.png",
-    place: "BunCraft",
-    time: "(29/07/2021 - 06/14/2022)",
-    desp: "<li>After Leaving PixelHeim I did some free-lance work and then joined Buncraft as Junior Developer</li><li>I worked on the Custom Python Server Bot and in helping Server Development</li>",
-  },
-  {
     title: "Server Creation And Admin",
     cardImage: "assets/images/experience-page/PixelHeim.png",
     place: "PixelHeim",
     time: "(22/4/2021 - 28/5/2021)",
     desp: "<li>Worked In Server Creation and the Intial Server Creation</li> <li>Left the Server due to Some misunderstandings</li>",
   },
+  {
+    title: "Junior Developer",
+    cardImage: "assets/images/experience-page/BunCraft.png",
+    place: "BunCraft",
+    time: "(29/07/2021 - 14/06/2022)",
+    desp: "<li>After Leaving PixelHeim I did some free-lance work and then joined Buncraft as Junior Developer</li><li>I worked on the Custom Python Server Bot and in helping Server Development</li>",
+  },
+  {
+    title: "Developer",
+    cardImage: "https://imgur.com/a/hIHUUMi",
+    place: "EliteFantasy",
+    time: "(08/09/2022 - Present)",
+    desp: "<li>After Buncraft ended and moved to HirayaCraft I took a break for my studies </li><li>When i was back i had this great offer from Masaki so i joined EliteFantasy Staff Team</li>",
+  },
+  
 ];
 
 const showCards2 = () => {
@@ -57,16 +65,28 @@ document.addEventListener("DOMContentLoaded", showCards2);
 const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
-    title: "",
-    cardImage: "https://i.imgur.com/iNqDb1y.png",
+    title: "Harmonia Nerwork",
+    cardImage: "https://imgur.com/a/fe7FfKv",
     description:
-      "This Server Is being created in 1.17.1 Platform on Paper Server as Requested By the Owner creeperquinn#6141",
+      "A Minecraft server accessible for diverse users, themed over harmony the server intends to provide diverse game modes for players to enjoy.",
   },
   {
     title: "Ursidae Network",
     cardImage: "https://i.imgur.com/CGrBRCF.png",
     description:
       "This is a Personal server hosted where other players can join https://ursi-dae.github.io/",
+  },
+  {
+    title: "Elite Fantasy",
+    cardImage: "https://imgur.com/a/hIHUUMi",
+    description:
+      "Its a whole new experience of minecraft with custom and cool resources that feels surreal :)",
+  }
+  {
+    title: "Empty",
+    cardImage: "assets/images/experience-page/empty.png",
+    description:
+      "...",
   },
 ];
 
@@ -97,9 +117,9 @@ const hackathonsection = document.querySelector(".hackathon-section");
 const mentor = [
   {
     title: "Empty",
-    subtitle: "-",
+    subtitle: "...",
     image: "assets/images/experience-page/empty.png",
-    desp: "-",
+    desp: "...",
   },
   
   
