@@ -125,7 +125,7 @@ const mentor = [
   {
     title: "Stock_#1891",
     subtitle: "Owner-Harmonia Network",
-    image: "https://cdn.discordapp.com/avatars/772850997915025448/c8ae9ed59eb3b027c67095ead9e6743c.png",
+    image: "https://i.imgur.com/XkDhl7b.png",
     desp: "A really great developer, especially when it comes to being creative and cooperative at all times. Deep understanding of his work, makes him the perfect developer you'll need for your work. I highly recommend hiring him.",
   },
   {
