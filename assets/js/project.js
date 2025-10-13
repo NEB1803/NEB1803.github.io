@@ -32,7 +32,7 @@ const projects = [
   {
     title: "P2K Money Manager",
     cardImage: "assets/images/project-page/p2k.png",
-    description: "P2K Manager is a minimalist web application to share expenses with friends and family.",
+    description: "Minimalist web application to share expenses with friends and family.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://p2k.neb1803.tech",
     Githublink: "https://p2k.neb1803.tech",
