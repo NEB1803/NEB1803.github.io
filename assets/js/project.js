@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Minecraft Server Bot {JS}",
     cardImage: "https://pbs.twimg.com/profile_images/1329889478815739906/M5Kig3BR_400x400.jpg",
-    description: "A bot tells the infomation of the server written in javascript",
+    description: "A bot that tells the infomation of the server written in javascript",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "",
     Githublink: "https://github.com/NEB1803/Javascript-minecraft-Bot",
