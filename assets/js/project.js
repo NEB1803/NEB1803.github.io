@@ -38,12 +38,20 @@ const projects = [
     Githublink: "https://p2k.neb1803.tech",
   },
   {
+    title: "Snake Game",
+    cardImage: "https://www.coolmathgames.com/sites/default/files/Snake_OG-logo.jpg",
+    description: "Just a  simple snake game made with html css and javascript. ",
+    tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
+    Previewlink: "./game/index.html",
+    Githublink: "https://github.com/NEB1803/",
+  },
+  {
     title: "In Progress..",
     cardImage: "assets/images/experience-page/empty.png",
     description: "This part of project is still in progress.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
-    Previewlink: "",
-    Githublink: "",
+    Previewlink: "./404.html",
+    Githublink: "https://github.com/NEB1803",
   },
 ];
 

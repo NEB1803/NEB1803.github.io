@@ -16,9 +16,9 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="./index">Home</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="./game">Game</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="./experience">Experience</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="./projects">Projects</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="https://github.com/NEB1803">Github</a></li>
    <li class="nav-item">
    <input type="checkbox" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
    </li>
