@@ -190,13 +190,26 @@ a:hover {
 }
 
 .card .wrapper {
-    background-color: #fff;
-    border: 0;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
     min-height: 21.5rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 19px 38px var(--shadow1), 0 15px 12px var(--shadow2);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+    transition: all 0.3s ease;
+}
+
+html[data-theme="dark"] .card .wrapper {
+    background: rgba(26, 32, 44, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.card .wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.25);
 }
 
 .card .wrapper:hover .data {
@@ -208,7 +221,8 @@ a:hover {
     bottom: 0;
     width: 100%;
     transition: transform 0.3s;
-    background: rgba(0, 0, 0, 0.55);
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.95) 100%);
+    backdrop-filter: blur(10px);
 }
 
 @media(min-width: 60rem) {
