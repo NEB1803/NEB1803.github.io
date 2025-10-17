@@ -1,23 +1,23 @@
 html[data-theme='light'] {
-    --bg-col: #fafafa;
-    --shadow1: rgba(0, 0, 0, 0.3);
-    --shadow2: rgba(0, 0, 0, 0.2);
-    --text: #191919;
+    --bg-col: #f8f9fa;
+    --shadow1: rgba(102, 126, 234, 0.2);
+    --shadow2: rgba(102, 126, 234, 0.1);
+    --text: #1a202c;
     --neu-light: white;
-    --neu-dark: #c3c3c3;
-    --neu-color: #c3c3c3;
-    --neu-icon: #c3c3c3;
+    --neu-dark: #e2e8f0;
+    --neu-color: #4a5568;
+    --neu-icon: #667eea;
 }
 
 html[data-theme='dark'] {
-    --bg-col: #272727;
-    --shadow1: rgba(128, 122, 122, 0.233);
-    --shadow2: rgba(231, 216, 216, 0.007);
-    --neu-light: #282828;
-    --neu-dark: #080808;
-    --neu-color: white;
-    --text: rgba(255, 255, 255, 0.5);
-    --neu-icon: whitesmoke;
+    --bg-col: #1a202c;
+    --shadow1: rgba(102, 126, 234, 0.3);
+    --shadow2: rgba(102, 126, 234, 0.1);
+    --neu-light: #2d3748;
+    --neu-dark: #0f172a;
+    --neu-color: #f7fafc;
+    --text: #e2e8f0;
+    --neu-icon: #667eea;
 }
 html{
     overflow-x: hidden;
@@ -35,7 +35,11 @@ body {
 /*color of projects page heading*/
 
 .my_projects {
-    color: #4e00bb;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
 }
 
 
