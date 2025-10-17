@@ -1,43 +1,39 @@
 /*Declaration of CSS variables for light/dark theme*/
 
 html[data-theme="light"] {
-  --col-icon: black;
-  --col-bd-radius:rgb(2, 2, 2);
-  --col-box-shadow:#000000 2px 2px 4px, 
-  #4D4D4D -2px -2px 4px;
- --col-box-shadow-hover:inset #8a7373 2px 2px 4px, 
- inset #4D4D4D -2px -2px 4px;
-  --col-bd-icon:transparent;
+  --col-icon: #2d3748;
+  --col-bd-radius: rgb(2, 2, 2);
+  --col-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --col-box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --col-bd-icon: transparent;
   --bg-icon: #fff;
-   --bg1-color: #fff;
+  --bg1-color: #fff;
   --col-icon-dribbble: #ea4c89;
   --col-icon-linkedin: #0e76a8;
   --col-icon-kaggle: #41aff3;  
   --col-icon-instagram: rgb(201, 94, 174);
-  --col-icon-mail:rgb(209, 82, 82);
-  --col-icon-google-scholar:#3cba54;
-  --col-icon-codeforces:rgb(19, 145, 184);
-  --col-icon-leetcode:rgb(255, 181, 62);
-  --shadow-col: rgba(0, 0, 0, 0.3);
-
+  --col-icon-mail: rgb(209, 82, 82);
+  --col-icon-google-scholar: #3cba54;
+  --col-icon-codeforces: rgb(19, 145, 184);
+  --col-icon-leetcode: rgb(255, 181, 62);
+  --shadow-col: rgba(102, 126, 234, 0.2);
 }
 
 html[data-theme="dark"] {
-  --col-icon:white;
-  --col-bd-radius:black;
-  --col-bd-icon:transparent;
-  --col-box-shadow: 5px 5px 10px rgba(22, 21, 21, 0.7) , -5px -5px 10px rgba(255,255,255,0.1);
-  --col-box-shadow-hover:inset rgba(255, 255, 255, 1) 2px 2px 4px, 
- inset rgba(255, 255, 255, 0.5) -2px -2px 4px;
+  --col-icon: #f7fafc;
+  --col-bd-radius: #1a202c;
+  --col-bd-icon: transparent;
+  --col-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --col-box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.6);
   --col-icon-dribbble: #ea4c89;
   --col-icon-linkedin: #0e76a8;
   --col-icon-kaggle: #41aff3;
   --col-icon-instagram: rgb(201, 94, 174);
-  --col-icon-mail:rgb(209, 82, 82);
-  --col-icon-google-scholar:#3cba54;
-  --col-icon-codeforces:rgb(19, 145, 184);
-  --col-icon-leetcode:rgb(255, 181, 62);
-  --col-white: #fff;
+  --col-icon-mail: rgb(209, 82, 82);
+  --col-icon-google-scholar: #3cba54;
+  --col-icon-codeforces: rgb(19, 145, 184);
+  --col-icon-leetcode: rgb(255, 181, 62);
+  --col-white: #f7fafc;
 }
 /* Particle effect*/
 body{
@@ -58,6 +54,10 @@ body{
 
 .text .header {
   font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text {
@@ -66,6 +66,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  text-align: center;
 }
 
 .animated-text span {
@@ -113,7 +114,8 @@ body{
 }
 
 a.socialicon {
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px var(--shadow-col);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons {
@@ -122,7 +124,9 @@ a.socialicon {
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
+  gap: 10px;
 }
+
 .socialicon{
   display: flex;
   position: relative;
@@ -132,9 +136,14 @@ a.socialicon {
   background-color: #fff;
   margin: 8px;
   border-radius: 50%;
-  box-shadow: 2px 5px 5px var(--shadow-col);
+  box-shadow: 0 5px 20px var(--shadow-col);
   text-decoration: none;
-  transition: var(--trans-props);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socialicon:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 35px var(--shadow-col);
 }
 .socialicon i {
   margin: auto;
@@ -424,16 +433,15 @@ a.socialicon {
 ----------------------------
 */
 
-.socialicon:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
-}
 .socialicon:hover:after {
   transform: translate(0) scale(1.2);
 }
+
 .socialicon:hover i {
   color: #fff;
+  transform: scale(1.1);
 }
+
 a:hover {
   color: transparent;
 }

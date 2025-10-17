@@ -31,7 +31,11 @@ html {
 /*color of education page heading*/
 
 .edu_background {
-  color: #4e00bb;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
 }
 
 /* -----Education Section CSS----- */
@@ -100,7 +104,23 @@ h4 {
   font-size: 2.5vh;
 }
 .card {
-  background-color: var(--bg1-color);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+  transition: all 0.3s ease;
+}
+
+html[data-theme="dark"] .card {
+  background: rgba(26, 32, 44, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(102, 126, 234, 0.25);
 }
 .s2 .card img {
   height: 90%;
@@ -109,7 +129,7 @@ h4 {
 
 .s2 .card,
 .s2 img {
-  border-radius: 3rem;
+  border-radius: 20px;
 }
 
 .card .row {

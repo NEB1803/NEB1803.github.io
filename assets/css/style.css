@@ -7,17 +7,17 @@
 /*CSS variable declaration for light/dark mode*/
 
 html[data-theme="light"] {
-    --bg-mybtn: red;
-    --bg-nav: black;
-    --bg-nav-img: black;
-    --bg-footer: #DDE1EC;
+    --bg-mybtn: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-nav: #ffffff;
+    --bg-nav-img: #ffffff;
+    --bg-footer: #f8f9fa;
     --bg: #ffffff;
-    --text: #191919;
-    --text-color: #6c757d;
-    --col-icon: black;
+    --text: #1a202c;
+    --text-color: #4a5568;
+    --col-icon: #2d3748;
     --col-bd-radius: rgb(2, 2, 2);
-    --col-box-shadow: #000000 2px 2px 4px, #4D4D4D -2px -2px 4px;
-    --col-box-shadow-hover: inset #8a7373 2px 2px 4px, inset #4D4D4D -2px -2px 4px;
+    --col-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --col-box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
     --col-bd-icon: transparent;
     --bg-icon: #fff;
     --col-icon-twitter: #1da1f2;
@@ -30,35 +30,41 @@ html[data-theme="light"] {
     --col-icon-google-scholar: #3cba54;
     --col-icon-codeforces: rgb(19, 145, 184);
     --col-icon-leetcode: rgb(255, 181, 62);
-    --shadow-col: rgba(0, 0, 0, 0.3);
+    --shadow-col: rgba(0, 0, 0, 0.15);
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 html[data-theme="dark"] {
-    --bg-mybtn: rgb(230, 109, 129);
-    --bg-nav: #6617cb;
-    --bg-nav-img: linear-gradient(315deg, #6617cb 0%, #882463 74%);
-    --bg-footer: linear-gradient(315deg, #6617cb 0%, #882463 74%);
-    --bg: #191919;
-    --text: #ffffff;
-    --text-color: #fff;
-    --bg-txt-img: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+    --bg-mybtn: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-nav: #1a202c;
+    --bg-nav-img: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-footer: #1a202c;
+    --bg: #0f172a;
+    --text: #f7fafc;
+    --text-color: #e2e8f0;
+    --bg-txt-img: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --txt-fill: transparent;
-    --col-icon: white;
-    --col-bd-radius: black;
+    --col-icon: #f7fafc;
+    --col-bd-radius: #1a202c;
     --col-bd-icon: transparent;
-    --col-box-shadow: 5px 5px 10px rgba(22, 21, 21, 0.7), -5px -5px 10px rgba(255, 255, 255, 0.1);
-    --col-box-shadow-hover: inset rgba(255, 255, 255, 1) 2px 2px 4px, inset rgba(255, 255, 255, 0.5) -2px -2px 4px;
+    --col-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --col-box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.6);
     --col-icon-twitter: #1da1f2;
     --col-icon-dribbble: #ea4c89;
     --col-icon-linkedin: #0e76a8;
     --col-icon-kaggle: #41aff3;
-    --col-icon-github: #24292e;
+    --col-icon-github: #f7fafc;
     --col-icon-instagram: rgb(201, 94, 174);
     --col-icon-mail: rgb(209, 82, 82);
     --col-icon-google-scholar: #3cba54;
     --col-icon-codeforces: rgb(19, 145, 184);
     --col-icon-leetcode: rgb(255, 181, 62);
-    --col-white: #fff;
+    --col-white: #f7fafc;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 
@@ -69,33 +75,29 @@ html[data-theme="dark"] {
 */
 
 ::-webkit-scrollbar {
-    width: 16px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #bb86fc;
-    border-radius: 2px;
-    background: #f1f1f1;
+    background: var(--bg);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 2px;
-    max-height: 10px;
-    -webkit-box-shadow: inset 0 0 6px #bb86fc;
-    background: #bb86fc;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     transition: 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ca9eff;
-    
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
 /* Custom Scrollbar for Mozilla Firefox*/
 html{
     overflow-y: visible;
-    scrollbar-color: #ca9eff #f1f1f1;
-    scrollbar-width: auto;
+    scrollbar-color: #764ba2 var(--bg);
+    scrollbar-width: thin;
 }
 
 body {
@@ -105,6 +107,8 @@ body {
     color: var(--text);
     font-family: "Poppins", sans-serif;
     background-color: var(--bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
 }
 .text-center heading1 exp-head {
     color: white;
@@ -116,11 +120,11 @@ body {
 #btnScrollToTop {
     width: 50px;
     height: 50px;
-    background-color: #bb86fc;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     margin: 8px;
     border: none;
     border-radius: 50%;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     text-decoration: none;
     position: fixed;
     outline: none;
@@ -128,6 +132,12 @@ body {
     right: 10px;
     animation: up 1.5s infinite;
     -webkit-animation: up 1.5s infinite;
+    transition: all 0.3s ease;
+}
+
+#btnScrollToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
 
@@ -234,9 +244,18 @@ html {
 }
 
 .navbar {
-    color: #000000;
-    background-color: #fff;
+    color: var(--text);
+    background-color: var(--bg-nav);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.dark-theme .navbar {
+    background: rgba(26, 32, 44, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 /* Dark Mode toggle switch button */
@@ -391,7 +410,8 @@ color: #ffffff !important;
         margin-right: auto;
         bottom: 0;
         width: 32%;
-        border-bottom: 3px solid #6a00bb;
+        border-bottom: 3px solid;
+        border-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) 1;
     }
     
     .nav-item-hover::after {
@@ -402,7 +422,7 @@ color: #ffffff !important;
         height: 0.15em;
         bottom: 0;
         width: 0%;
-        background-color: #6a00bb;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         transition: all ease-in-out 280ms;
     }
     
@@ -501,7 +521,11 @@ color: #ffffff !important;
 .footer {
     padding-top: 10px;
     font-family: "Poppins", sans-serif;
-    background-color: #121212;
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-theme .footer {
+    background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
 }
 
 .tag {
@@ -780,7 +804,8 @@ Rotate Transition in foote Soical Icon
     font-size: 25px;
     font-weight: 200;
     line-height: 22px;
-    border-bottom: 3px solid #bb86fc;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) 1;
 }
 
 .form-header {
@@ -809,7 +834,7 @@ form {
 }
 
 .form-style-6 h1 {
-    background: #bb86fc;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     font-size: 140%;
     font-weight: 300;
     text-align: center;
@@ -839,7 +864,7 @@ form {
     background: transparent;
     margin-bottom: 4%;
     border: #000;
-    border-bottom: 2px solid #bb86fc;
+    border-bottom: 2px solid #667eea;
     padding: 3%;
     color: rgb(107, 105, 105);
     font: 95% Arial, Helvetica, sans-serif;
@@ -856,9 +881,9 @@ form {
 .form-style-6 input[type="url"]:focus,
 .form-style-6 textarea:focus,
 .form-style-6 select:focus {
-    box-shadow: 0 0 5px #bb86fc;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
     padding: 3%;
-    border: 1px solid #bb86fc;
+    border: 1px solid #667eea;
     border-radius: 2px;
 }
 
@@ -870,20 +895,19 @@ form {
     width: 100%;
     margin-top: 2rem;
     padding: 3%;
-    background: #bb86fc;
-    border-bottom: 2px solid #bb86fc;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
     border-radius: 23px;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
     color: #fff;
     font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .form-style-6 input[type="submit"]:hover,
 .form-style-6 input[type="button"]:hover {
-    background:#6a00bbd2;;
-  
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
 
 .form-comtainer {
@@ -975,8 +999,14 @@ form {
 /* box shadow for profile picture */
 
 .rounded-circle {
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-    -khtml-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    -moz-box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    -webkit-box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    -khtml-box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.rounded-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
 }
