@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Run Club Redemption</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .poster {
+    width: 600px;
+    min-height: 860px;
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 48px 0;
+  }
+
+  /* Grunge texture overlay */
+  .poster::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Top accent bar */
+  .top-bar {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #e63000, #ff6a00, #e63000);
+  }
+
+  /* Sun / radial burst */
+  .burst {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 420px;
+    height: 420px;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg 10deg, rgba(230,48,0,0.08) 10deg 20deg,
+      transparent 20deg 30deg, rgba(230,48,0,0.08) 30deg 40deg,
+      transparent 40deg 50deg, rgba(230,48,0,0.08) 50deg 60deg,
+      transparent 60deg 70deg, rgba(230,48,0,0.08) 70deg 80deg,
+      transparent 80deg 90deg, rgba(230,48,0,0.08) 90deg 100deg,
+      transparent 100deg 110deg, rgba(230,48,0,0.08) 110deg 120deg,
+      transparent 120deg 130deg, rgba(230,48,0,0.08) 130deg 140deg,
+      transparent 140deg 150deg, rgba(230,48,0,0.08) 150deg 160deg,
+      transparent 160deg 170deg, rgba(230,48,0,0.08) 170deg 180deg,
+      transparent 180deg 190deg, rgba(230,48,0,0.08) 190deg 200deg,
+      transparent 200deg 210deg, rgba(230,48,0,0.08) 210deg 220deg,
+      transparent 220deg 230deg, rgba(230,48,0,0.08) 230deg 240deg,
+      transparent 240deg 250deg, rgba(230,48,0,0.08) 250deg 260deg,
+      transparent 260deg 270deg, rgba(230,48,0,0.08) 270deg 280deg,
+      transparent 280deg 290deg, rgba(230,48,0,0.08) 290deg 300deg,
+      transparent 300deg 310deg, rgba(230,48,0,0.08) 310deg 320deg,
+      transparent 320deg 330deg, rgba(230,48,0,0.08) 330deg 340deg,
+      transparent 340deg 350deg, rgba(230,48,0,0.08) 350deg 360deg
+    );
+    border-radius: 50%;
+    z-index: 1;
+    animation: spin 40s linear infinite;
+  }
+
+  @keyframes spin { to { transform: translateX(-50%) rotate(360deg); } }
+
+  /* Silhouette runner strip */
+  .runner-strip {
+    width: 100%;
+    height: 110px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .runner-strip svg {
+    height: 100px;
+    fill: #e63000;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 12px rgba(230,48,0,0.6));
+  }
+
+  /* Ground line */
+  .ground {
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e63000, transparent);
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* EST badge */
+  .est-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: #e63000;
+    text-transform: uppercase;
+    margin-top: 22px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .est-badge span {
+    color: #555;
+  }
+
+  /* Main heading */
+  .heading-wrap {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 6px;
+    padding: 0 20px;
+  }
+
+  .heading-run {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 108px;
+    line-height: 0.88;
+    color: #f5f0eb;
+    letter-spacing: 4px;
+    display: block;
+    text-shadow: 4px 4px 0px #e63000, 8px 8px 0px rgba(230,48,0,0.2);
+    animation: flicker 6s ease-in-out infinite;
+  }
+
+  .heading-club {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 108px;
+    line-height: 0.88;
+    color: #e63000;
+    letter-spacing: 4px;
+    display: block;
+    text-shadow: 4px 4px 0px #7a1500;
+  }
+
+  .heading-redemption {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    line-height: 1;
+    color: #f5f0eb;
+    letter-spacing: 12px;
+    display: block;
+    margin-top: 2px;
+    -webkit-text-stroke: 1px #444;
+    color: transparent;
+    background: linear-gradient(180deg, #c8bfb4 0%, #6b6058 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes flicker {
+    0%, 95%, 100% { opacity: 1; }
+    96% { opacity: 0.85; }
+    97% { opacity: 1; }
+    98% { opacity: 0.9; }
+  }
+
+  /* Divider */
+  .divider {
+    width: 80%;
+    margin: 22px auto 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .divider-line { flex: 1; height: 1px; background: #333; }
+  .divider-diamond {
+    width: 8px; height: 8px;
+    background: #e63000;
+    transform: rotate(45deg);
+  }
+
+  /* Body text */
+  .body-section {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    padding: 24px 48px 0;
+  }
+
+  .body-section p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #b0a89f;
+    line-height: 1.65;
+    letter-spacing: 0.5px;
+  }
+
+  .body-section p strong {
+    color: #f0ebe5;
+    font-weight: 700;
+  }
+
+  /* Info cards */
+  .info-row {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    padding: 0 40px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-card {
+    flex: 1;
+    border: 1px solid #2a2a2a;
+    border-top: 3px solid #e63000;
+    background: #111;
+    padding: 18px 16px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(230,48,0,0.04) 0%, transparent 60%);
+  }
+
+  .info-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #e63000;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .info-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #f5f0eb;
+    letter-spacing: 2px;
+  }
+
+  /* Bottom tagline */
+  .tagline {
+    z-index: 2;
+    position: relative;
+    margin-top: 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #444;
+    text-transform: uppercase;
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #e63000, #ff6a00, #e63000);
+  }
+
+  /* Track lines decoration */
+  .track-lines {
+    position: absolute;
+    bottom: 60px;
+    left: 0; right: 0;
+    height: 60px;
+    z-index: 1;
+    opacity: 0.07;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .track-lines div { height: 1px; background: #e63000; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="top-bar"></div>
+  <div class="burst"></div>
+
+  <!-- Runner silhouettes -->
+  <div class="runner-strip">
+    <!-- Runner 1 -->
+    <svg viewBox="0 0 60 100" style="transform:scaleX(-1);opacity:0.5;height:72px">
+      <ellipse cx="30" cy="12" rx="8" ry="9"/>
+      <line x1="30" y1="21" x2="30" y2="58" stroke="#e63000" stroke-width="5"/>
+      <line x1="30" y1="35" x2="12" y2="52" stroke="#e63000" stroke-width="4"/>
+      <line x1="30" y1="35" x2="46" y2="26" stroke="#e63000" stroke-width="4"/>
+      <line x1="30" y1="58" x2="14" y2="78" stroke="#e63000" stroke-width="4"/>
+      <line x1="30" y1="58" x2="44" y2="82" stroke="#e63000" stroke-width="4"/>
+    </svg>
+    <!-- Main runner -->
+    <svg viewBox="0 0 70 120">
+      <circle cx="35" cy="13" r="11"/>
+      <path d="M35 24 L32 60 L18 90 L26 90 L35 65 L44 90 L52 90 L38 60 L42 24Z"/>
+      <line x1="32" y1="38" x2="10" y2="28" stroke="#e63000" stroke-width="6" stroke-linecap="round"/>
+      <line x1="38" y1="38" x2="58" y2="52" stroke="#e63000" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <!-- Runner 2 -->
+    <svg viewBox="0 0 60 100" style="opacity:0.5;height:72px">
+      <ellipse cx="30" cy="12" rx="8" ry="9"/>
+      <line x1="30" y1="21" x2="30" y2="58" stroke="#e63000" stroke-width="5"/>
+      <line x1="30" y1="35" x2="48" y2="50" stroke="#e63000" stroke-width="4"/>
+      <line x1="30" y1="35" x2="14" y2="28" stroke="#e63000" stroke-width="4"/>
+      <line x1="30" y1="58" x2="44" y2="80" stroke="#e63000" stroke-width="4"/>
+      <line x1="30" y1="58" x2="16" y2="84" stroke="#e63000" stroke-width="4"/>
+    </svg>
+  </div>
+  <div class="ground"></div>
+
+  <!-- Established -->
+  <div class="est-badge">— <span>Est.</span> 2025 —</div>
+
+  <!-- Heading -->
+  <div class="heading-wrap">
+    <span class="heading-run">RUN</span>
+    <span class="heading-club">CLUB</span>
+    <span class="heading-redemption">REDEMPTION</span>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond"></div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- Body -->
+  <div class="body-section">
+    <p>Welcome back to <strong>another season</strong> of Run Club.</p>
+    <p style="margin-top:10px">We will have our usual run club sessions<br>from <strong>this coming Sunday.</strong></p>
+    <p style="margin-top:10px">Make sure to make yourself available —<br><strong>bring your friends along!</strong></p>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="info-row">
+    <div class="info-card">
+      <div class="info-label">📍 Location</div>
+      <div class="info-value">Red Pipe</div>
+    </div>
+    <div class="info-card">
+      <div class="info-label">⏰ Time</div>
+      <div class="info-value">6:30 AM</div>
+    </div>
+  </div>
+
+  <div class="tagline">Every mile is a new beginning</div>
+
+  <!-- Track decoration -->
+  <div class="track-lines">
+    <div></div><div></div><div></div><div></div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+</body>
+</html>
